@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Input = ({ setInput }) => {
+const Input = ({ setInput, setLoading }) => {
   const [city, setCity] = useState("delhi");
 
   const changeHandler = (e) => {
@@ -10,6 +10,7 @@ const Input = ({ setInput }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     setInput(city);
+    setLoading(true);
   };
 
   return (
